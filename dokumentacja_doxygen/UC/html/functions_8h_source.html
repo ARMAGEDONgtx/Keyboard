@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sm_project_ADUC_doxy: Plik źródłowy programy/UC/aduc/functions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="put logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sm_project_ADUC_doxy
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99dd21434370c721f67d6798cc6f7be9.html">programy</a></li><li class="navelem"><a class="el" href="dir_773b5db0a9897511d88b68d45a6fbec1.html">UC</a></li><li class="navelem"><a class="el" href="dir_94ed636d478681f892894597ab92589d.html">aduc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">functions.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="functions_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*!</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    @author Michal Wr�blewski</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    @file functions.h</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    @date 22-12-2017</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    @brief DEKLARACJE funckji   </span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _FUNCTIONS_H__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _FUNCTIONS_H__</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a8427897206f599c9df2b3035b0ffc369">delay</a>(<span class="keywordtype">int</span> cycles);  <span class="comment">//!&lt; delay w cyklach </span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a8aa473f8ae9a91df4bc9ea700983c72d">delay_ms</a>(<span class="keywordtype">int</span> ms);  <span class="comment">//!&lt; delay w ms</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a3f88352450dad51d82e4bf84a0a439a1">delay_us</a>(<span class="keywordtype">int</span> us);  <span class="comment">//!&lt; delay w us</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#ac857514ed4dc6a41883f311d1c33c577">UART_obsluga</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; przerwanie od UART&#39;a</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a1fac25ed8c10aa9b9d7d5b8293aea16b">UART_wyslij</a>(<span class="keywordtype">char</span> c); <span class="comment">//!&lt; wysylanie znaku po UART&#39;cie</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#aca66cbd8ee46700b0e3cedae042f145f">UART_wyslij_str</a>(<span class="keywordtype">char</span>* str, <span class="keywordtype">int</span> ile); <span class="comment">//!&lt; wysylanie string&#39;a po UART&#39;cie</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a44476289291f7b9a4427de2e50e7a77b">UART_send_cfg</a>(); <span class="comment">//!&lt; wysylanie konfiguracji czestotliwosci po UART&#39;cie</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#ad2c34fbe80c53a9f0729ee35dad2127a">ext_int_0</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; przerwanie od external interrupt 0</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#accf10e799101c600045b2d7d04ca6338">ext_int_1</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; przerwanie od external interrupt 1</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a48449d868c89c5e724396639190c3803">timer1_obsluga</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; przerwanie od timera 1</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#aa1d6374ddedf37e62864c577a6127fcb">adc_obsluga</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; przerwanie od ADC</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span><span class="keywordtype">int</span> <a class="code" href="functions_8h.html#a78aefb3d517347a01bd45a4bf0d2e206">character_to_freq</a>(<span class="keywordtype">char</span> button); <span class="comment">//!&lt; zamiana chara na odpowaidajaca mu czestotliwosc</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a40fc3d99311b02c2f113ad077d5287a8">send_record</a>(<span class="keywordtype">char</span> a); <span class="comment">//!&lt; wysyalnie danych dot. piosenki - nie zaimplementowane</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#afc7d70defab7fd3786358e16546737eb">klawiatura_znak</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; obsluga klawiatury</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a061c98e3993c03b3eec3a0951b5e1554">klaw_init</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; inicjalizacja klawiatury</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a9b05e97fdbd276bd390cfd06f757cedc">interrupt_3</a>(<span class="keywordtype">void</span>); <span class="comment">//!&lt; przerwanie timer 0</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a283d5f05742caff97972c04c3b107476">timer0_interrupt</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> us); <span class="comment">//!&lt; funckja dodatkowa do przewania timer&#39;a 0</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a13d7f2722d401897608d9303352f483b">tone</a>(<span class="keywordtype">char</span> button, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  wypelnienie); <span class="comment">//!&lt; zmiana PWM&#39;a - generowanie tonu</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="functions_8h_html_afc7d70defab7fd3786358e16546737eb"><div class="ttname"><a href="functions_8h.html#afc7d70defab7fd3786358e16546737eb">klawiatura_znak</a></div><div class="ttdeci">void klawiatura_znak(void)</div><div class="ttdoc">obsluga klawiatury </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00059">functions_sound.c:59</a></div></div>
+<div class="ttc" id="functions_8h_html_a9b05e97fdbd276bd390cfd06f757cedc"><div class="ttname"><a href="functions_8h.html#a9b05e97fdbd276bd390cfd06f757cedc">interrupt_3</a></div><div class="ttdeci">void interrupt_3(void)</div><div class="ttdoc">przerwanie timer 0 </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00120">functions_sound.c:120</a></div></div>
+<div class="ttc" id="functions_8h_html_ad2c34fbe80c53a9f0729ee35dad2127a"><div class="ttname"><a href="functions_8h.html#ad2c34fbe80c53a9f0729ee35dad2127a">ext_int_0</a></div><div class="ttdeci">void ext_int_0(void)</div><div class="ttdoc">przerwanie od external interrupt 0 </div></div>
+<div class="ttc" id="functions_8h_html_a48449d868c89c5e724396639190c3803"><div class="ttname"><a href="functions_8h.html#a48449d868c89c5e724396639190c3803">timer1_obsluga</a></div><div class="ttdeci">void timer1_obsluga(void)</div><div class="ttdoc">przerwanie od timera 1 </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00140">functions.c:140</a></div></div>
+<div class="ttc" id="functions_8h_html_a78aefb3d517347a01bd45a4bf0d2e206"><div class="ttname"><a href="functions_8h.html#a78aefb3d517347a01bd45a4bf0d2e206">character_to_freq</a></div><div class="ttdeci">int character_to_freq(char button)</div><div class="ttdoc">zamiana chara na odpowaidajaca mu czestotliwosc </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00242">functions_sound.c:242</a></div></div>
+<div class="ttc" id="functions_8h_html_accf10e799101c600045b2d7d04ca6338"><div class="ttname"><a href="functions_8h.html#accf10e799101c600045b2d7d04ca6338">ext_int_1</a></div><div class="ttdeci">void ext_int_1(void)</div><div class="ttdoc">przerwanie od external interrupt 1 </div></div>
+<div class="ttc" id="functions_8h_html_a8427897206f599c9df2b3035b0ffc369"><div class="ttname"><a href="functions_8h.html#a8427897206f599c9df2b3035b0ffc369">delay</a></div><div class="ttdeci">void delay(int cycles)</div><div class="ttdoc">delay w cyklach </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00016">functions.c:16</a></div></div>
+<div class="ttc" id="functions_8h_html_a13d7f2722d401897608d9303352f483b"><div class="ttname"><a href="functions_8h.html#a13d7f2722d401897608d9303352f483b">tone</a></div><div class="ttdeci">void tone(char button, unsigned int wypelnienie)</div><div class="ttdoc">zmiana PWM&amp;#39;a - generowanie tonu </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00167">functions_sound.c:167</a></div></div>
+<div class="ttc" id="functions_8h_html_a44476289291f7b9a4427de2e50e7a77b"><div class="ttname"><a href="functions_8h.html#a44476289291f7b9a4427de2e50e7a77b">UART_send_cfg</a></div><div class="ttdeci">void UART_send_cfg()</div><div class="ttdoc">wysylanie konfiguracji czestotliwosci po UART&amp;#39;cie </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00103">functions.c:103</a></div></div>
+<div class="ttc" id="functions_8h_html_ac857514ed4dc6a41883f311d1c33c577"><div class="ttname"><a href="functions_8h.html#ac857514ed4dc6a41883f311d1c33c577">UART_obsluga</a></div><div class="ttdeci">void UART_obsluga(void)</div><div class="ttdoc">przerwanie od UART&amp;#39;a </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00076">functions.c:76</a></div></div>
+<div class="ttc" id="functions_8h_html_a3f88352450dad51d82e4bf84a0a439a1"><div class="ttname"><a href="functions_8h.html#a3f88352450dad51d82e4bf84a0a439a1">delay_us</a></div><div class="ttdeci">void delay_us(int us)</div><div class="ttdoc">delay w us </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00038">functions.c:38</a></div></div>
+<div class="ttc" id="functions_8h_html_a8aa473f8ae9a91df4bc9ea700983c72d"><div class="ttname"><a href="functions_8h.html#a8aa473f8ae9a91df4bc9ea700983c72d">delay_ms</a></div><div class="ttdeci">void delay_ms(int ms)</div><div class="ttdoc">delay w ms </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00029">functions.c:29</a></div></div>
+<div class="ttc" id="functions_8h_html_a40fc3d99311b02c2f113ad077d5287a8"><div class="ttname"><a href="functions_8h.html#a40fc3d99311b02c2f113ad077d5287a8">send_record</a></div><div class="ttdeci">void send_record(char a)</div><div class="ttdoc">wysyalnie danych dot. piosenki - nie zaimplementowane </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00120">functions.c:120</a></div></div>
+<div class="ttc" id="functions_8h_html_a1fac25ed8c10aa9b9d7d5b8293aea16b"><div class="ttname"><a href="functions_8h.html#a1fac25ed8c10aa9b9d7d5b8293aea16b">UART_wyslij</a></div><div class="ttdeci">void UART_wyslij(char c)</div><div class="ttdoc">wysylanie znaku po UART&amp;#39;cie </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00049">functions.c:49</a></div></div>
+<div class="ttc" id="functions_8h_html_a061c98e3993c03b3eec3a0951b5e1554"><div class="ttname"><a href="functions_8h.html#a061c98e3993c03b3eec3a0951b5e1554">klaw_init</a></div><div class="ttdeci">void klaw_init(void)</div><div class="ttdoc">inicjalizacja klawiatury </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00030">functions_sound.c:30</a></div></div>
+<div class="ttc" id="functions_8h_html_aca66cbd8ee46700b0e3cedae042f145f"><div class="ttname"><a href="functions_8h.html#aca66cbd8ee46700b0e3cedae042f145f">UART_wyslij_str</a></div><div class="ttdeci">void UART_wyslij_str(char *str, int ile)</div><div class="ttdoc">wysylanie string&amp;#39;a po UART&amp;#39;cie </div><div class="ttdef"><b>Definition:</b> <a href="functions_8c_source.html#l00061">functions.c:61</a></div></div>
+<div class="ttc" id="functions_8h_html_a283d5f05742caff97972c04c3b107476"><div class="ttname"><a href="functions_8h.html#a283d5f05742caff97972c04c3b107476">timer0_interrupt</a></div><div class="ttdeci">void timer0_interrupt(unsigned int us)</div><div class="ttdoc">funckja dodatkowa do przewania timer&amp;#39;a 0 </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00097">functions_sound.c:97</a></div></div>
+<div class="ttc" id="functions_8h_html_aa1d6374ddedf37e62864c577a6127fcb"><div class="ttname"><a href="functions_8h.html#aa1d6374ddedf37e62864c577a6127fcb">adc_obsluga</a></div><div class="ttdeci">void adc_obsluga(void)</div><div class="ttdoc">przerwanie od ADC </div><div class="ttdef"><b>Definition:</b> <a href="functions__sound_8c_source.html#l00136">functions_sound.c:136</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

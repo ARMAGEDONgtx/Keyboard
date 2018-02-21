@@ -1,0 +1,5 @@
+"main.obj",
+"functions.obj",
+"functions_sound.obj" 
+TO "lab2" 
+RAMSIZE(256) 

@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sm_project_ADUC_doxy: Dokumentacja pliku programy/UC/aduc/dio.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="put logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sm_project_ADUC_doxy
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99dd21434370c721f67d6798cc6f7be9.html">programy</a></li><li class="navelem"><a class="el" href="dir_773b5db0a9897511d88b68d45a6fbec1.html">UC</a></li><li class="navelem"><a class="el" href="dir_94ed636d478681f892894597ab92589d.html">aduc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku dio.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>input/output macros  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="aduc831_8h_source.html">aduc831.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="int__lib_8h_source.html">int_lib.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla dio.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dio_8h__incl.png" border="0" usemap="#programy_2_u_c_2aduc_2dio_8h" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dyncontent">
+<div class="center"><img src="dio_8h__dep__incl.png" border="0" usemap="#programy_2_u_c_2aduc_2dio_8hdep" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="dio_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a3c6e92f876139dc9b96ef68bebdd9057"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a3c6e92f876139dc9b96ef68bebdd9057">SetBit</a>(byte,  b)&#160;&#160;&#160;byte|=0x01&lt;&lt;b</td></tr>
+<tr class="separator:a3c6e92f876139dc9b96ef68bebdd9057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5156ccbc783456def0eaf1daf8336aad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a5156ccbc783456def0eaf1daf8336aad">ClearBit</a>(byte,  b)&#160;&#160;&#160;byte&amp;=~(0x01&lt;&lt;b)</td></tr>
+<tr class="separator:a5156ccbc783456def0eaf1daf8336aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9c4385d6d41ba5a8d0ed53378788b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a5b9c4385d6d41ba5a8d0ed53378788b0">ToggleBit</a>(byte,  b)&#160;&#160;&#160;byte^=0x01&lt;&lt;b</td></tr>
+<tr class="separator:a5b9c4385d6d41ba5a8d0ed53378788b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06b0dfc389511cc31e5773e2d3ad002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#ab06b0dfc389511cc31e5773e2d3ad002">CheckBit</a>(byte,  b)&#160;&#160;&#160;(byte&amp;(0x01&lt;&lt;b))</td></tr>
+<tr class="separator:ab06b0dfc389511cc31e5773e2d3ad002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a25bde69c6148f66160450354c584d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a97a25bde69c6148f66160450354c584d">LedPort</a>&#160;&#160;&#160;<a class="el" href="aduc831_8h.html#a707a972d927f14b7bf9fcb88b9e32b4a">P2</a></td></tr>
+<tr class="memdesc:a97a25bde69c6148f66160450354c584d"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#a97a25bde69c6148f66160450354c584d">Więcej...</a><br /></td></tr>
+<tr class="separator:a97a25bde69c6148f66160450354c584d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8672962a3c818ec40bc965f074af05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a5b8672962a3c818ec40bc965f074af05">LED_D5</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a5b8672962a3c818ec40bc965f074af05"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#a5b8672962a3c818ec40bc965f074af05">Więcej...</a><br /></td></tr>
+<tr class="separator:a5b8672962a3c818ec40bc965f074af05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf593fc25ad36ba4f26f7b4ce5d4a6d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#adf593fc25ad36ba4f26f7b4ce5d4a6d3">LED_D9</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:adf593fc25ad36ba4f26f7b4ce5d4a6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#adf593fc25ad36ba4f26f7b4ce5d4a6d3">Więcej...</a><br /></td></tr>
+<tr class="separator:adf593fc25ad36ba4f26f7b4ce5d4a6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f8edd0f5ad030236ca320327944ead"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#ab6f8edd0f5ad030236ca320327944ead">LED_D11</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:ab6f8edd0f5ad030236ca320327944ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#ab6f8edd0f5ad030236ca320327944ead">Więcej...</a><br /></td></tr>
+<tr class="separator:ab6f8edd0f5ad030236ca320327944ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7fab333eca76289e7319bb21767488"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#abc7fab333eca76289e7319bb21767488">LED_D12</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:abc7fab333eca76289e7319bb21767488"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#abc7fab333eca76289e7319bb21767488">Więcej...</a><br /></td></tr>
+<tr class="separator:abc7fab333eca76289e7319bb21767488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5eb1bad632123fd3ec111302e31e983"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#ab5eb1bad632123fd3ec111302e31e983">KeyPort</a>&#160;&#160;&#160;<a class="el" href="aduc831_8h.html#aef699f2688c4c4a26b691a3df9145de7">P3</a></td></tr>
+<tr class="memdesc:ab5eb1bad632123fd3ec111302e31e983"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#ab5eb1bad632123fd3ec111302e31e983">Więcej...</a><br /></td></tr>
+<tr class="separator:ab5eb1bad632123fd3ec111302e31e983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5e60f63d50631b52179004b04ecbe2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#afe5e60f63d50631b52179004b04ecbe2">PR1</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:afe5e60f63d50631b52179004b04ecbe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">definy do makro instrukcji  <a href="#afe5e60f63d50631b52179004b04ecbe2">Więcej...</a><br /></td></tr>
+<tr class="separator:afe5e60f63d50631b52179004b04ecbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21e0868ca8fce26c238b15c661b42ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#aa21e0868ca8fce26c238b15c661b42ab">PR2</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:aa21e0868ca8fce26c238b15c661b42ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1103f5972e69f74d60326b22929da107"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a1103f5972e69f74d60326b22929da107">LedOn</a>(Dioda)&#160;&#160;&#160;<a class="el" href="dio_8h.html#a5156ccbc783456def0eaf1daf8336aad">ClearBit</a>(<a class="el" href="dio_8h.html#a97a25bde69c6148f66160450354c584d">LedPort</a>,Dioda)</td></tr>
+<tr class="memdesc:a1103f5972e69f74d60326b22929da107"><td class="mdescLeft">&#160;</td><td class="mdescRight">makro wlaczajace diode  <a href="#a1103f5972e69f74d60326b22929da107">Więcej...</a><br /></td></tr>
+<tr class="separator:a1103f5972e69f74d60326b22929da107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc880a57ee9cd756212143b9a1ee15c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a0bc880a57ee9cd756212143b9a1ee15c">LedOff</a>(Dioda)&#160;&#160;&#160;<a class="el" href="dio_8h.html#a3c6e92f876139dc9b96ef68bebdd9057">SetBit</a>(<a class="el" href="dio_8h.html#a97a25bde69c6148f66160450354c584d">LedPort</a>,Dioda)</td></tr>
+<tr class="memdesc:a0bc880a57ee9cd756212143b9a1ee15c"><td class="mdescLeft">&#160;</td><td class="mdescRight">makro wylaczajace diode  <a href="#a0bc880a57ee9cd756212143b9a1ee15c">Więcej...</a><br /></td></tr>
+<tr class="separator:a0bc880a57ee9cd756212143b9a1ee15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb83bda914418ad131faf027e2d5a1fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#adb83bda914418ad131faf027e2d5a1fa">KEY_DOWN</a>(Przycisk)&#160;&#160;&#160;!<a class="el" href="dio_8h.html#ab06b0dfc389511cc31e5773e2d3ad002">CheckBit</a>(<a class="el" href="dio_8h.html#ab5eb1bad632123fd3ec111302e31e983">KeyPort</a>,Przycisk)</td></tr>
+<tr class="memdesc:adb83bda914418ad131faf027e2d5a1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">makro sprawdzajace czy przycisk jest wcisniety  <a href="#adb83bda914418ad131faf027e2d5a1fa">Więcej...</a><br /></td></tr>
+<tr class="separator:adb83bda914418ad131faf027e2d5a1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4dff90915c938464def2dd695ce2fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#aaa4dff90915c938464def2dd695ce2fe">KEY_UP</a>(Przycisk)&#160;&#160;&#160;<a class="el" href="dio_8h.html#ab06b0dfc389511cc31e5773e2d3ad002">CheckBit</a>(<a class="el" href="dio_8h.html#ab5eb1bad632123fd3ec111302e31e983">KeyPort</a>,Przycisk)</td></tr>
+<tr class="memdesc:aaa4dff90915c938464def2dd695ce2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">makro sprawdzajace czy przycisk jest wcisniety  <a href="#aaa4dff90915c938464def2dd695ce2fe">Więcej...</a><br /></td></tr>
+<tr class="separator:aaa4dff90915c938464def2dd695ce2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aee3beceffb391d6aa3012c48f0a35b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a3aee3beceffb391d6aa3012c48f0a35b">F_OSC</a>&#160;&#160;&#160;11058000.0</td></tr>
+<tr class="separator:a3aee3beceffb391d6aa3012c48f0a35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a2dbb00eb21d79903dce47f0ddfc9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a37a2dbb00eb21d79903dce47f0ddfc9f">T_dzielnik</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a37a2dbb00eb21d79903dce47f0ddfc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee05393ee1ef01b69b07e6ba81f81cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a6ee05393ee1ef01b69b07e6ba81f81cd">T_rozdzielczosc</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a6ee05393ee1ef01b69b07e6ba81f81cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09dffe1130bf0499a5be205ee95cd8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#af09dffe1130bf0499a5be205ee95cd8d">Tx_tau</a>(dzielnik)&#160;&#160;&#160;(float)((float)dzielnik/<a class="el" href="dio_8h.html#a3aee3beceffb391d6aa3012c48f0a35b">F_OSC</a>)</td></tr>
+<tr class="memdesc:af09dffe1130bf0499a5be205ee95cd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">zaleznosci og�lne  <a href="#af09dffe1130bf0499a5be205ee95cd8d">Więcej...</a><br /></td></tr>
+<tr class="separator:af09dffe1130bf0499a5be205ee95cd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf65f18d5d0d55f44f2d926d77082e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#abaf65f18d5d0d55f44f2d926d77082e1">Tx_N</a>(czas_ms,  dzielnik)&#160;&#160;&#160;(unsigned int)((float)czas_ms/<a class="el" href="dio_8h.html#af09dffe1130bf0499a5be205ee95cd8d">Tx_tau</a>(dzielnik)/1000.0)</td></tr>
+<tr class="memdesc:abaf65f18d5d0d55f44f2d926d77082e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">zaleznosci ogolne cd.  <a href="#abaf65f18d5d0d55f44f2d926d77082e1">Więcej...</a><br /></td></tr>
+<tr class="separator:abaf65f18d5d0d55f44f2d926d77082e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18268cdbdfd49626a3c79da68ce23a58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a18268cdbdfd49626a3c79da68ce23a58">T_rejestr_wartosc_poczatkowa</a>(czas_ms)&#160;&#160;&#160;((0x000001ul&lt;&lt;T_rozdzielczosc)-Tx_N(czas_ms,T_dzielnik))</td></tr>
+<tr class="memdesc:a18268cdbdfd49626a3c79da68ce23a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustawianie timera  <a href="#a18268cdbdfd49626a3c79da68ce23a58">Więcej...</a><br /></td></tr>
+<tr class="separator:a18268cdbdfd49626a3c79da68ce23a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbc0d9dde2b93c8cfa4b3b60c70d31a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dio_8h.html#a6bbc0d9dde2b93c8cfa4b3b60c70d31a">T1_ustaw_czas_ms</a>(czas_ms)</td></tr>
+<tr class="memdesc:a6bbc0d9dde2b93c8cfa4b3b60c70d31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustawianie timera  <a href="#a6bbc0d9dde2b93c8cfa4b3b60c70d31a">Więcej...</a><br /></td></tr>
+<tr class="separator:a6bbc0d9dde2b93c8cfa4b3b60c70d31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>input/output macros </p>
+<dl class="section author"><dt>Autor</dt><dd>Michal Wr�blewski</dd></dl>
+<dl class="section date"><dt>Data</dt><dd>17-10-2017 </dd></dl>
+
+<p class="definition">Definicja w pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="ab06b0dfc389511cc31e5773e2d3ad002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06b0dfc389511cc31e5773e2d3ad002">&#9670;&nbsp;</a></span>CheckBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CheckBit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(byte&amp;(0x01&lt;&lt;b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="dio_8h.html#ab06b0dfc389511cc31e5773e2d3ad002">CheckBit(byte,b)</a> MAKRO DO SPRAWDZANIA BITU </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00024">24</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a5156ccbc783456def0eaf1daf8336aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5156ccbc783456def0eaf1daf8336aad">&#9670;&nbsp;</a></span>ClearBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ClearBit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;byte&amp;=~(0x01&lt;&lt;b)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="dio_8h.html#a5156ccbc783456def0eaf1daf8336aad">ClearBit(byte, b)</a> MAKR DO Kasowania </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00018">18</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a3aee3beceffb391d6aa3012c48f0a35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aee3beceffb391d6aa3012c48f0a35b">&#9670;&nbsp;</a></span>F_OSC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define F_OSC&#160;&#160;&#160;11058000.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>wejscie - musimy ustawic w stan wysoki i odczytywac piny wyjscie - musimy ustawic stan niski - 0 , wysoki - 1 </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00052">52</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="adb83bda914418ad131faf027e2d5a1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb83bda914418ad131faf027e2d5a1fa">&#9670;&nbsp;</a></span>KEY_DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KEY_DOWN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Przycisk</td><td>)</td>
+          <td>&#160;&#160;&#160;!<a class="el" href="dio_8h.html#ab06b0dfc389511cc31e5773e2d3ad002">CheckBit</a>(<a class="el" href="dio_8h.html#ab5eb1bad632123fd3ec111302e31e983">KeyPort</a>,Przycisk)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>makro sprawdzajace czy przycisk jest wcisniety </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00041">41</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="aaa4dff90915c938464def2dd695ce2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4dff90915c938464def2dd695ce2fe">&#9670;&nbsp;</a></span>KEY_UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KEY_UP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Przycisk</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dio_8h.html#ab06b0dfc389511cc31e5773e2d3ad002">CheckBit</a>(<a class="el" href="dio_8h.html#ab5eb1bad632123fd3ec111302e31e983">KeyPort</a>,Przycisk)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>makro sprawdzajace czy przycisk jest wcisniety </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00042">42</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="ab5eb1bad632123fd3ec111302e31e983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5eb1bad632123fd3ec111302e31e983">&#9670;&nbsp;</a></span>KeyPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KeyPort&#160;&#160;&#160;<a class="el" href="aduc831_8h.html#aef699f2688c4c4a26b691a3df9145de7">P3</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00032">32</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="ab6f8edd0f5ad030236ca320327944ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f8edd0f5ad030236ca320327944ead">&#9670;&nbsp;</a></span>LED_D11</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_D11&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00030">30</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="abc7fab333eca76289e7319bb21767488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7fab333eca76289e7319bb21767488">&#9670;&nbsp;</a></span>LED_D12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_D12&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00031">31</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a5b8672962a3c818ec40bc965f074af05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8672962a3c818ec40bc965f074af05">&#9670;&nbsp;</a></span>LED_D5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_D5&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00028">28</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="adf593fc25ad36ba4f26f7b4ce5d4a6d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf593fc25ad36ba4f26f7b4ce5d4a6d3">&#9670;&nbsp;</a></span>LED_D9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_D9&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00029">29</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a0bc880a57ee9cd756212143b9a1ee15c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc880a57ee9cd756212143b9a1ee15c">&#9670;&nbsp;</a></span>LedOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LedOff</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Dioda</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dio_8h.html#a3c6e92f876139dc9b96ef68bebdd9057">SetBit</a>(<a class="el" href="dio_8h.html#a97a25bde69c6148f66160450354c584d">LedPort</a>,Dioda)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>makro wylaczajace diode </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00038">38</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a1103f5972e69f74d60326b22929da107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1103f5972e69f74d60326b22929da107">&#9670;&nbsp;</a></span>LedOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LedOn</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Dioda</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dio_8h.html#a5156ccbc783456def0eaf1daf8336aad">ClearBit</a>(<a class="el" href="dio_8h.html#a97a25bde69c6148f66160450354c584d">LedPort</a>,Dioda)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>makro wlaczajace diode </p>
+<p>INPUT OP </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00037">37</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a97a25bde69c6148f66160450354c584d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a25bde69c6148f66160450354c584d">&#9670;&nbsp;</a></span>LedPort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LedPort&#160;&#160;&#160;<a class="el" href="aduc831_8h.html#a707a972d927f14b7bf9fcb88b9e32b4a">P2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00027">27</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="afe5e60f63d50631b52179004b04ecbe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5e60f63d50631b52179004b04ecbe2">&#9670;&nbsp;</a></span>PR1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PR1&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definy do makro instrukcji </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00033">33</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="aa21e0868ca8fce26c238b15c661b42ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21e0868ca8fce26c238b15c661b42ab">&#9670;&nbsp;</a></span>PR2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PR2&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00034">34</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a3c6e92f876139dc9b96ef68bebdd9057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6e92f876139dc9b96ef68bebdd9057">&#9670;&nbsp;</a></span>SetBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SetBit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;byte|=0x01&lt;&lt;b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reg/Bit Operations</p>
+<p><a class="el" href="dio_8h.html#a3c6e92f876139dc9b96ef68bebdd9057">SetBit(byte,b)</a> MAKR DO SETOWANIA </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00015">15</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a6bbc0d9dde2b93c8cfa4b3b60c70d31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbc0d9dde2b93c8cfa4b3b60c70d31a">&#9670;&nbsp;</a></span>T1_ustaw_czas_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T1_ustaw_czas_ms</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">czas_ms</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Wartość:</b><div class="fragment"><div class="line"><a class="code" href="aduc831_8h.html#a085fdae33c36c8d6cbc00b55c111fce9">TL1</a>=<a class="code" href="dio_8h.html#a18268cdbdfd49626a3c79da68ce23a58">T_rejestr_wartosc_poczatkowa</a>(czas_ms);\</div><div class="line">TH1=<a class="code" href="dio_8h.html#a18268cdbdfd49626a3c79da68ce23a58">T_rejestr_wartosc_poczatkowa</a>(czas_ms)&gt;&gt;8</div><div class="ttc" id="aduc831_8h_html_a085fdae33c36c8d6cbc00b55c111fce9"><div class="ttname"><a href="aduc831_8h.html#a085fdae33c36c8d6cbc00b55c111fce9">TL1</a></div><div class="ttdeci">sfr TL1</div><div class="ttdef"><b>Definition:</b> <a href="aduc831_8h_source.html#l00016">aduc831.h:16</a></div></div>
+<div class="ttc" id="dio_8h_html_a18268cdbdfd49626a3c79da68ce23a58"><div class="ttname"><a href="dio_8h.html#a18268cdbdfd49626a3c79da68ce23a58">T_rejestr_wartosc_poczatkowa</a></div><div class="ttdeci">#define T_rejestr_wartosc_poczatkowa(czas_ms)</div><div class="ttdoc">ustawianie timera </div><div class="ttdef"><b>Definition:</b> <a href="dio_8h_source.html#l00063">dio.h:63</a></div></div>
+</div><!-- fragment -->
+<p>ustawianie timera </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00067">67</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a37a2dbb00eb21d79903dce47f0ddfc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a2dbb00eb21d79903dce47f0ddfc9f">&#9670;&nbsp;</a></span>T_dzielnik</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T_dzielnik&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00053">53</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a18268cdbdfd49626a3c79da68ce23a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18268cdbdfd49626a3c79da68ce23a58">&#9670;&nbsp;</a></span>T_rejestr_wartosc_poczatkowa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T_rejestr_wartosc_poczatkowa</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">czas_ms</td><td>)</td>
+          <td>&#160;&#160;&#160;((0x000001ul&lt;&lt;T_rozdzielczosc)-Tx_N(czas_ms,T_dzielnik))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ustawianie timera </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00063">63</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a6ee05393ee1ef01b69b07e6ba81f81cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee05393ee1ef01b69b07e6ba81f81cd">&#9670;&nbsp;</a></span>T_rozdzielczosc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T_rozdzielczosc&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00054">54</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="a5b9c4385d6d41ba5a8d0ed53378788b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9c4385d6d41ba5a8d0ed53378788b0">&#9670;&nbsp;</a></span>ToggleBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ToggleBit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">byte, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;byte^=0x01&lt;&lt;b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="dio_8h.html#a5b9c4385d6d41ba5a8d0ed53378788b0">ToggleBit(byte,b)</a> MAKR DO TOGGLOWANIA </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00021">21</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="abaf65f18d5d0d55f44f2d926d77082e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf65f18d5d0d55f44f2d926d77082e1">&#9670;&nbsp;</a></span>Tx_N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Tx_N</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">czas_ms, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dzielnik&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(unsigned int)((float)czas_ms/<a class="el" href="dio_8h.html#af09dffe1130bf0499a5be205ee95cd8d">Tx_tau</a>(dzielnik)/1000.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zaleznosci ogolne cd. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00059">59</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+<a id="af09dffe1130bf0499a5be205ee95cd8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af09dffe1130bf0499a5be205ee95cd8d">&#9670;&nbsp;</a></span>Tx_tau</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Tx_tau</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dzielnik</td><td>)</td>
+          <td>&#160;&#160;&#160;(float)((float)dzielnik/<a class="el" href="dio_8h.html#a3aee3beceffb391d6aa3012c48f0a35b">F_OSC</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zaleznosci og�lne </p>
+
+<p class="definition">Definicja w linii <a class="el" href="dio_8h_source.html#l00057">57</a> pliku <a class="el" href="dio_8h_source.html">dio.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

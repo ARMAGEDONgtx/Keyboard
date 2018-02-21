@@ -1,0 +1,91 @@
+C51 COMPILER V9.53.0.0   KLAWIATURA                                                        11/20/2017 08:17:17 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE KLAWIATURA
+OBJECT MODULE PLACED IN klawiatura.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE klawiatura.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          /*!
+   2            @author Michal Wróblewski
+   3            @file klawiatura.c
+   4            @date 12-11-2017
+   5            @brief AduC831 LAB06
+   6          */
+   7          #include "LCD.h"
+   8          
+   9          sbit W1 = P1^4;
+  10          sbit W2 = P1^5;
+  11          sbit W3 = P1^6;
+  12          sbit W4 = P1^7;
+  13          sbit K1 = P3^5;
+  14          sbit K2 = P3^6;
+  15          sbit K3 = P3^7;
+  16          
+  17          void klawiatura_init()
+  18          {
+  19   1        P1 = 0x00;
+  20   1      }
+  21          
+  22          //! odczytywanie znaku z klawiatury
+  23          char klawiatura_read()
+  24          {
+  25   1        char character = 0;
+  26   1        //do{
+  27   1          K1 = 0; K2 = 1; K3 = 1;
+  28   1            while(W1 == 0) character = '1';
+  29   1            while(W2 == 0) character = '4';
+  30   1            while(W3 == 0) character = '7';
+  31   1            while(W4 == 0) character = '*';
+  32   1          K1 = 1; K2 = 0; K3 = 1;
+  33   1            while(W1 == 0) character = '2';
+  34   1            while(W2 == 0) character = '5';
+  35   1            while(W3 == 0) character = '8';
+  36   1            while(W4 == 0) character = '0';
+  37   1          K1 = 1; K2 = 1; K3 = 0;
+  38   1            while(W1 == 0) character = '3';
+  39   1            while(W2 == 0) character = '6';
+  40   1            while(W3 == 0) character = '9';
+  41   1            while(W4 == 0) character = '#'; //Carriage return
+  42   1        //} while(character == 0);
+  43   1        return character;
+  44   1      }
+  45          
+  46          //!odczytywanie znaku i wyswietlanie na LCD
+  47          void klawiatura_char_LCD()
+  48          {
+  49   1        char znak;
+  50   1        znak=klawiatura_read();
+  51   1        LCD_znak(znak);
+  52   1      }
+  53          
+  54          //!odczytywanie ciagu znakow i zapisywanie na LCD
+  55          void klawiatura_str_LCD()
+C51 COMPILER V9.53.0.0   KLAWIATURA                                                        11/20/2017 08:17:17 PAGE 2   
+
+  56          {
+  57   1        char text[20];
+  58   1        int i=0;
+  59   1        do
+  60   1        {
+  61   2          text[i]=klawiatura_read();
+  62   2          i++;
+  63   2        } while (text[i]==0x0D);
+  64   1        
+  65   1        LCD_wyslij_str(text);
+  66   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    150    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      20
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

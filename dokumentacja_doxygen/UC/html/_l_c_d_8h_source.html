@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sm_project_ADUC_doxy: Plik źródłowy programy/UC/aduc/LCD.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="put logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sm_project_ADUC_doxy
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99dd21434370c721f67d6798cc6f7be9.html">programy</a></li><li class="navelem"><a class="el" href="dir_773b5db0a9897511d88b68d45a6fbec1.html">UC</a></li><li class="navelem"><a class="el" href="dir_94ed636d478681f892894597ab92589d.html">aduc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LCD.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_l_c_d_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*!</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    @author Michal Wr�blewski</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    @file LCD.h</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    @date 03-11-2017</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    @brief AduC831 LAB04</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="aduc831_8h.html">aduc831.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _LCD_H__</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define _LCD_H__</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a93d0229e1729cc5ace8cf95130e6c9c9">LCD_inicjalizacja</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a58ab3481db530b5a9a86bd00e0d27cba">LCD_wyslij</a>(<span class="keywordtype">char</span> dane, bit RS, bit RW);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a788309bf56da6736c46adab4353fe7cf">LCD_czekaj</a>(<span class="keywordtype">int</span> n);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a8b970ca8ce4f4f3e04e5c65f24cefdf6">LCD_znak</a>(<span class="keywordtype">char</span> znak);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a730c274e6f473473f8ada67e285a5486">Display_clear</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a1f0a6014115cba4493b47b117dc3a7a7">Cursor_home</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a2d87cb5276cc55e2b828703e9eb89220">Entry_mode</a>(<span class="keywordtype">int</span> ID, <span class="keywordtype">int</span> S );</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#aaf993f87a0e0348657b5ff0e9d20f069">Display_ON_OFF</a>(<span class="keywordtype">int</span> D, <span class="keywordtype">int</span> C,<span class="keywordtype">int</span> <a class="code" href="aduc831_8h.html#a5a9eaf23e07662cdbe357d4d4e415cb2">B</a>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#afd8577185f7ac023799ad3a4d9dcac7e">Display_Cursor_shift</a>(<span class="keywordtype">int</span> SC, <span class="keywordtype">int</span> RL);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a9bc6be2977a9c8b3cc564865792c0ecd">Function_set</a>(<span class="keywordtype">int</span> DL, <span class="keywordtype">int</span> N,<span class="keywordtype">int</span> F);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#aa76cefb9ef800a89b916c769204a4b89">CG_RAM_set</a>(<span class="keywordtype">int</span> ADRES);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a7c125164b657fc92111d51e17ec628cf">DD_RAM_set</a>(<span class="keywordtype">int</span> ADRES);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a19de81ce1b8da612a67e49f8ba4d4e57">Data_Write</a>(<span class="keywordtype">int</span> DANA);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">char</span> <a class="code" href="_l_c_d_8h.html#adb3921172817f956a2db40a82a849d54">Data_Read</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a0d1742b3dafcff8d8c942bbd2d1c2db6">LCD_wyslij_str</a>(<span class="keywordtype">char</span> *str);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a09113bbf8097f6fa91bcf12969f3c603">Printf_LCD</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *format, ...);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_l_c_d_8h.html#a04c2062f080148e56a97fefdaffda10d">LCD_GoTo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> y);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="ttc" id="_l_c_d_8h_html_a7c125164b657fc92111d51e17ec628cf"><div class="ttname"><a href="_l_c_d_8h.html#a7c125164b657fc92111d51e17ec628cf">DD_RAM_set</a></div><div class="ttdeci">void DD_RAM_set(int ADRES)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00101">LCD.c:101</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_aaf993f87a0e0348657b5ff0e9d20f069"><div class="ttname"><a href="_l_c_d_8h.html#aaf993f87a0e0348657b5ff0e9d20f069">Display_ON_OFF</a></div><div class="ttdeci">void Display_ON_OFF(int D, int C, int B)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00064">LCD.c:64</a></div></div>
+<div class="ttc" id="aduc831_8h_html_a5a9eaf23e07662cdbe357d4d4e415cb2"><div class="ttname"><a href="aduc831_8h.html#a5a9eaf23e07662cdbe357d4d4e415cb2">B</a></div><div class="ttdeci">sfr B</div><div class="ttdef"><b>Definition:</b> <a href="aduc831_8h_source.html#l00070">aduc831.h:70</a></div></div>
+<div class="ttc" id="aduc831_8h_html"><div class="ttname"><a href="aduc831_8h.html">aduc831.h</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a788309bf56da6736c46adab4353fe7cf"><div class="ttname"><a href="_l_c_d_8h.html#a788309bf56da6736c46adab4353fe7cf">LCD_czekaj</a></div><div class="ttdeci">void LCD_czekaj(int n)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00160">LCD.c:160</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a0d1742b3dafcff8d8c942bbd2d1c2db6"><div class="ttname"><a href="_l_c_d_8h.html#a0d1742b3dafcff8d8c942bbd2d1c2db6">LCD_wyslij_str</a></div><div class="ttdeci">void LCD_wyslij_str(char *str)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00171">LCD.c:171</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a04c2062f080148e56a97fefdaffda10d"><div class="ttname"><a href="_l_c_d_8h.html#a04c2062f080148e56a97fefdaffda10d">LCD_GoTo</a></div><div class="ttdeci">void LCD_GoTo(unsigned char x, unsigned char y)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00110">LCD.c:110</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_aa76cefb9ef800a89b916c769204a4b89"><div class="ttname"><a href="_l_c_d_8h.html#aa76cefb9ef800a89b916c769204a4b89">CG_RAM_set</a></div><div class="ttdeci">void CG_RAM_set(int ADRES)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00090">LCD.c:90</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_afd8577185f7ac023799ad3a4d9dcac7e"><div class="ttname"><a href="_l_c_d_8h.html#afd8577185f7ac023799ad3a4d9dcac7e">Display_Cursor_shift</a></div><div class="ttdeci">void Display_Cursor_shift(int SC, int RL)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00071">LCD.c:71</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a2d87cb5276cc55e2b828703e9eb89220"><div class="ttname"><a href="_l_c_d_8h.html#a2d87cb5276cc55e2b828703e9eb89220">Entry_mode</a></div><div class="ttdeci">void Entry_mode(int ID, int S)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00056">LCD.c:56</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a58ab3481db530b5a9a86bd00e0d27cba"><div class="ttname"><a href="_l_c_d_8h.html#a58ab3481db530b5a9a86bd00e0d27cba">LCD_wyslij</a></div><div class="ttdeci">void LCD_wyslij(char dane, bit RS, bit RW)</div><div class="ttdoc">bardziej ogolna funkcja do wysylania danych </div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00024">LCD.c:24</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a09113bbf8097f6fa91bcf12969f3c603"><div class="ttname"><a href="_l_c_d_8h.html#a09113bbf8097f6fa91bcf12969f3c603">Printf_LCD</a></div><div class="ttdeci">void Printf_LCD(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00180">LCD.c:180</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_adb3921172817f956a2db40a82a849d54"><div class="ttname"><a href="_l_c_d_8h.html#adb3921172817f956a2db40a82a849d54">Data_Read</a></div><div class="ttdeci">char Data_Read()</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00128">LCD.c:128</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a1f0a6014115cba4493b47b117dc3a7a7"><div class="ttname"><a href="_l_c_d_8h.html#a1f0a6014115cba4493b47b117dc3a7a7">Cursor_home</a></div><div class="ttdeci">void Cursor_home(void)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00046">LCD.c:46</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a730c274e6f473473f8ada67e285a5486"><div class="ttname"><a href="_l_c_d_8h.html#a730c274e6f473473f8ada67e285a5486">Display_clear</a></div><div class="ttdeci">void Display_clear(void)</div><div class="ttdoc">COMMANDS***********************************************************. </div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00039">LCD.c:39</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a9bc6be2977a9c8b3cc564865792c0ecd"><div class="ttname"><a href="_l_c_d_8h.html#a9bc6be2977a9c8b3cc564865792c0ecd">Function_set</a></div><div class="ttdeci">void Function_set(int DL, int N, int F)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00084">LCD.c:84</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a93d0229e1729cc5ace8cf95130e6c9c9"><div class="ttname"><a href="_l_c_d_8h.html#a93d0229e1729cc5ace8cf95130e6c9c9">LCD_inicjalizacja</a></div><div class="ttdeci">void LCD_inicjalizacja()</div><div class="ttdoc">inicjalizacja wyswietlacza </div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00139">LCD.c:139</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a8b970ca8ce4f4f3e04e5c65f24cefdf6"><div class="ttname"><a href="_l_c_d_8h.html#a8b970ca8ce4f4f3e04e5c65f24cefdf6">LCD_znak</a></div><div class="ttdeci">void LCD_znak(char znak)</div><div class="ttdoc">wysylanie pojedzynczego znaku </div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00166">LCD.c:166</a></div></div>
+<div class="ttc" id="_l_c_d_8h_html_a19de81ce1b8da612a67e49f8ba4d4e57"><div class="ttname"><a href="_l_c_d_8h.html#a19de81ce1b8da612a67e49f8ba4d4e57">Data_Write</a></div><div class="ttdeci">void Data_Write(int DANA)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d_8c_source.html#l00117">LCD.c:117</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

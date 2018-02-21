@@ -1,0 +1,335 @@
+C51 COMPILER V9.56.0.0   FUNCTIONS_SOUND                                                   01/22/2018 23:04:14 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE FUNCTIONS_SOUND
+OBJECT MODULE PLACED IN functions_sound.OBJ
+COMPILER INVOKED BY: D:\program files\keill\C51\BIN\C51.EXE functions_sound.c LARGE OPTIMIZE(8,SPEED) BROWSE DEBUG OBJEC
+                    -TEXTEND TABS(2)
+
+line level    source
+
+   1          /*!
+   2            @author Kamil Hoffmann
+   3            @file functions_sound.c
+   4            @date 22-12-2017
+   5            @brief Biblioteka funkcji
+   6            
+   7            
+   8          */
+   9          
+  10          #include "int_lib.h"
+  11          #include "dio.h"
+  12          #include "main.h"
+  13          
+  14          //#define F_OSC 11058000
+  15          
+  16          sbit W1 = P1^4; //!< sbit wiersz 1
+  17          sbit W2 = P1^5; //!< sbit wiersz 2
+  18          sbit W3 = P1^6; //!< sbit wiersz 3
+  19          sbit W4 = P1^7; //!< sbit wiersz 4
+  20          
+  21          sbit K1 = P3^5; //!< sbit kolumna 1
+  22          sbit K2 = P3^6; //!< sbit kolumna 2
+  23          sbit K3 = P3^7; //!< sbit kolumna 3
+  24          
+  25          /*!
+  26          incjalizacja klawiatury -
+  27          ustawienie odpowiednich wejsc,
+  28          zaincjalizowanie czestotliwosci wg. gammy
+  29          */
+  30          void klaw_init(void)
+  31          {
+  32   1      
+  33   1        W1=0;
+  34   1        W2=0;
+  35   1        W3=0;
+  36   1        W4=0;
+  37   1        
+  38   1        keypad_values[1] = 262; //c1
+  39   1        keypad_values[2] = 277; //cis1
+  40   1        keypad_values[3] = 294; //d1
+  41   1        keypad_values[4] = 311; //dis1
+  42   1        keypad_values[5] = 330; //e1
+  43   1        keypad_values[6] = 349; //f1
+  44   1        keypad_values[7] = 370; //fis1
+  45   1        keypad_values[8] = 392; //g1
+  46   1        keypad_values[9] = 415; //gis1
+  47   1        keypad_values[10] = 440; //a1
+  48   1        keypad_values[0] = 466; //ais1
+  49   1        keypad_values[11] = 494; //b1
+  50   1      }
+  51          
+  52          
+  53          char character = 'a'; //!< poprzedni wcisniety przycisk - do piosenek - nie zaimplementowaeno 
+  54          /*!
+C51 COMPILER V9.56.0.0   FUNCTIONS_SOUND                                                   01/22/2018 23:04:14 PAGE 2   
+
+  55          odczytywanie klawiatury,
+  56          sprawdzanie czy nie zostalo cos klikniete
+  57          if'y zamiast while zeby nie nie czekac w funkcji jak przycisk bedzie wcisniety
+  58          */
+  59          void klawiatura_znak(void)
+  60          {
+  61   1      character = 'a';
+  62   1      
+  63   1      //do{
+  64   1      K1=0;
+  65   1      K2=1;
+  66   1      K3=1;
+  67   1      
+  68   1      if(W1==0) character = '1';
+  69   1      if(W2==0) character = '4';
+  70   1      if(W3==0) character = '7';
+  71   1      if(W4==0) character = '*';
+  72   1        
+  73   1      K1=1;
+  74   1      K2=0;
+  75   1      K3=1;
+  76   1      
+  77   1      if(W1==0) character = '2';
+  78   1      if(W2==0) character = '5';
+  79   1      if(W3==0) character = '8';
+  80   1      if(W4==0) character = '0';
+  81   1      
+  82   1      K1=1;
+  83   1      K2=1;
+  84   1      K3=0;
+  85   1      if(W1==0) character = '3';
+  86   1      if(W2==0) character = '6';
+  87   1      if(W3==0) character = '9';
+  88   1      if(W4==0) character = '#';
+  89   1      //} while(character == 'a')
+  90   1      
+  91   1      }
+  92          
+  93          /*!
+  94          funckja pomocnicza do timer'a 0
+  95          ustawienie rejestrow
+  96          */
+  97          void timer0_interrupt(unsigned int us)
+  98          {
+  99   1        unsigned char stl1;
+ 100   1        unsigned char sth1;
+ 101   1        unsigned int N;
+ 102   1        
+ 103   1        N = 65536-us;
+ 104   1      
+ 105   1        stl1=N;
+ 106   1        sth1=N>>8;
+ 107   1        
+ 108   1        TL0 = stl1;
+ 109   1        TH0 = sth1;
+ 110   1        
+ 111   1      }
+ 112          
+ 113          
+ 114          
+ 115          
+ 116          /*!
+C51 COMPILER V9.56.0.0   FUNCTIONS_SOUND                                                   01/22/2018 23:04:14 PAGE 3   
+
+ 117          obsluga przerwania od timer'a 0
+ 118          zadamy pojedynczej kowersji ADC co 2 sekundy
+ 119          */
+ 120          void interrupt_3(void) interrupt 1
+ 121          {
+ 122   1        SCONV = 1;
+ 123   1        
+ 124   1        timer0_interrupt(2000);
+ 125   1      }
+ 126          
+ 127          char uart_potencjo[5] = 0; //!< tablica do UART'a
+ 128          unsigned int prev_potencjo = 0; //!< poprzednia wartosc potencjometru
+ 129          unsigned int potencjometr=0; //!< wartosc potencjometru
+ 130          /*!
+ 131          obsluga przerwania od ADC
+ 132          przetwarzamy dane,
+ 133          wyslamy wartosc potencjometru po UART'cie (jesli sie zmienila) - 
+ 134          dodatek jako pozycja potencjometru, ktora aktualizuje sie w aplikacji okienkowej po stronie PC
+ 135          */
+ 136          void adc_obsluga(void) interrupt 6
+ 137          {
+ 138   1        
+ 139   1        unsigned int ADC_rejestr_dolny = 0;
+ 140   1        unsigned int ADC_rejestr_gorny = 0; 
+ 141   1        
+ 142   1        //Pobranie wartosci probki
+ 143   1        ADC_rejestr_dolny = ADCDATAL;
+ 144   1        ADC_rejestr_gorny = ADCDATAH & 0x0F;    
+ 145   1        
+ 146   1        prev_potencjo = potencjometr;
+ 147   1        //Odpowiednie przeksztalcenie wartosci z rejestrow do zmniennej typu int
+ 148   1        potencjometr = ADC_rejestr_gorny << 8;
+ 149   1        potencjometr += ADC_rejestr_dolny;
+ 150   1        
+ 151   1        
+ 152   1        if(prev_potencjo != potencjometr)
+ 153   1        {
+ 154   2          sprintf(uart_potencjo, "@%d", potencjometr);
+ 155   2          UART_wyslij_str(uart_potencjo,5);
+ 156   2        }
+ 157   1        
+ 158   1      
+ 159   1      }
+ 160          
+ 161          /*!
+ 162            funkcja konfigurujaca pwm
+ 163            dziwiek wejscia takie jak symbole na klawiaturze
+ 164            wyp w skali 2^16
+ 165            if button == 'a' turn off
+ 166          */
+ 167          void tone(char buttom, unsigned int  wypelnienie)
+ 168          {
+ 169   1      
+ 170   1        
+ 171   1      #if bez_pot
+                
+              #define F_ZAD 500
+              #define WYPELNIENIE 0.5
+              
+              #define PWMa1 11058 //F_OSC / F_ZAD) // 
+              #define PWMa0 2765 //(WYPELNIENIE * PWM1) // 
+                
+C51 COMPILER V9.56.0.0   FUNCTIONS_SOUND                                                   01/22/2018 23:04:14 PAGE 4   
+
+                  //dla mode 1
+                  CFG831 = CFG831&(~(7<<2)) | CFG831&(~(1<<6));
+              
+                  PWMCON = 0x13;
+                  
+                  PWM1L = PWMa1;
+                  PWM1H = (PWMa1>>8);
+              
+                  PWM0L = PWMa0;
+                  PWM0H = (PWMa0>>8);
+                
+                
+              #endif  
+ 192   1      
+ 193   1      #if z_pot 
+ 194   1      
+ 195   1      unsigned int f_zad=0;
+ 196   1      unsigned int PWMa1r;  //F_OSC / F_ZAD 
+ 197   1      unsigned int PWMa0r;   //WYPELNIENIE * PWM1)
+ 198   1      
+ 199   1      if(buttom=='1') f_zad=keypad_values[1];
+ 200   1      if(buttom=='2') f_zad=keypad_values[2];
+ 201   1      if(buttom=='3') f_zad=keypad_values[3];
+ 202   1      if(buttom=='4') f_zad=keypad_values[4];
+ 203   1      if(buttom=='5') f_zad=keypad_values[5];
+ 204   1      if(buttom=='6') f_zad=keypad_values[6];
+ 205   1      if(buttom=='7') f_zad=keypad_values[7]; 
+ 206   1      if(buttom=='8') f_zad=keypad_values[8];
+ 207   1      if(buttom=='9') f_zad=keypad_values[9];
+ 208   1      if(buttom=='*') f_zad=keypad_values[10];
+ 209   1      if(buttom=='0') f_zad=keypad_values[0];
+ 210   1      if(buttom=='#') f_zad=keypad_values[11];
+ 211   1      if(buttom=='a') f_zad=0; //turned off
+ 212   1      
+ 213   1      if(f_zad == 0)
+ 214   1      {
+ 215   2        PWMCON = 0x00;
+ 216   2        return;
+ 217   2      }
+ 218   1      
+ 219   1      CFG831 = CFG831&(~(7<<2)) | CFG831&(~(1<<6));
+ 220   1      
+ 221   1      PWMCON = 0x13;
+ 222   1      
+ 223   1      
+ 224   1      PWMa1r=F_OSC/f_zad;
+ 225   1      PWMa0r=PWMa1r*(float)wypelnienie/4096.0;
+ 226   1      
+ 227   1      PWM1L = PWMa1r;
+ 228   1      PWM1H = (PWMa1r>>8);
+ 229   1      
+ 230   1      PWM0L = PWMa0r;
+ 231   1      PWM0H = (PWMa0r>>8);
+ 232   1        
+ 233   1      
+ 234   1      #endif
+ 235   1      
+ 236   1      }
+ 237          
+ 238          /*!
+ 239          zamiana znaku odpowiadajacemu danemu przyciskowi
+ 240          na przypisana wartosc czestotliwosci dla tego przycisku
+C51 COMPILER V9.56.0.0   FUNCTIONS_SOUND                                                   01/22/2018 23:04:14 PAGE 5   
+
+ 241          */
+ 242          int character_to_freq(char button)
+ 243          {
+ 244   1        switch(button)
+ 245   1        {
+ 246   2          case '1':
+ 247   2          {
+ 248   3            return keypad_values[1];
+ 249   3          }
+ 250   2          case '2':
+ 251   2          {
+ 252   3            return keypad_values[2];
+ 253   3          }
+ 254   2          case '3':
+ 255   2          {
+ 256   3            return keypad_values[3];
+ 257   3          }
+ 258   2            case '4':
+ 259   2          {
+ 260   3            return keypad_values[4];
+ 261   3          }
+ 262   2            case '5':
+ 263   2          {
+ 264   3            return keypad_values[5];
+ 265   3          }
+ 266   2            case '6':
+ 267   2          {
+ 268   3            return keypad_values[6];
+ 269   3          }
+ 270   2            case '7':
+ 271   2          {
+ 272   3            return keypad_values[7];
+ 273   3          }
+ 274   2            case '8':
+ 275   2          {
+ 276   3            return keypad_values[8];
+ 277   3          }
+ 278   2            case '9':
+ 279   2          {
+ 280   3            return keypad_values[9];
+ 281   3          }
+ 282   2            case '0':
+ 283   2          {
+ 284   3            return keypad_values[0];
+ 285   3          }
+ 286   2            case '*':
+ 287   2          {
+ 288   3            return keypad_values[10];
+ 289   3          }
+ 290   2            case '#':
+ 291   2          {
+ 292   3            return keypad_values[11];
+ 293   3          }
+ 294   2        }
+ 295   1        
+ 296   1        return 0;
+ 297   1        
+ 298   1      }
+ 299          
+ 300          
+ 301          
+
+C51 COMPILER V9.56.0.0   FUNCTIONS_SOUND                                                   01/22/2018 23:04:14 PAGE 6   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    856    ----
+   CONSTANT SIZE    =      4    ----
+   XDATA SIZE       =     10       4
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

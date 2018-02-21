@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.20.0.39
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mi Michal, put, LIC=SDJUD-801TX-TDDKX-9LKKI-GWZIU-LT771
+ 
+Tool Versions:
+Toolchain:       PK51 Prof. Developers Kit  Version: 9.56.0.0
+Toolchain Path:  D:\program files\keill\C51\BIN
+C Compiler:      C51.exe V9.56.0.0
+Assembler:       A51.exe V8.2.5.0
+Linker/Locator:  BL51.exe V6.22
+Library Manager: LIB51.exe V4.30.1.0
+Hex Converter:   OH51.exe V2.7.0.0
+CPU DLL:         S8051.DLL V3.106.0.0
+Dialog DLL:      DP51.DLL V2.63.0.0
+Target DLL:      MONADI.DLL V1.11.0.0
+Dialog DLL:      TP51.DLL V2.59.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Michal\Desktop\build-uart_sm-Desktop_Qt_5_9_1_MSVC2015_64bit-Debug\PROJEKT_SM\UC\aduc\lab2.uvproj
+Project File Date:  01/20/2018
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(62): warning C275: expression with possibly no effect
+main.c(63): warning C275: expression with possibly no effect
+compiling functions.c...
+compiling functions_sound.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?FUNCTIONS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_US?FUNCTIONS
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?PRINTF?PRINTF
+    CALLER1: ?PR?TIMER1_OBSLUGA?FUNCTIONS
+    CALLER2: ?PR?ADC_OBSLUGA?FUNCTIONS_SOUND
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_UART_WYSLIJ_STR?FUNCTIONS
+    CALLER1: ?PR?TIMER1_OBSLUGA?FUNCTIONS
+    CALLER2: ?PR?ADC_OBSLUGA?FUNCTIONS_SOUND
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?PRINTF?PRINTF
+    CALLER1: ?PR?ADC_OBSLUGA?FUNCTIONS_SOUND
+    CALLER2: ?C_C51STARTUP
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_UART_WYSLIJ_STR?FUNCTIONS
+    CALLER1: ?PR?ADC_OBSLUGA?FUNCTIONS_SOUND
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.7 xdata=339 code=6169
+creating hex file from "lab2"...
+"lab2" - 0 Error(s), 8 Warning(s).
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
